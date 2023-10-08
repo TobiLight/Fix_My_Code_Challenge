@@ -5,10 +5,14 @@
 class Square:
     """Square class."""
 
-    def __init__(self, width=0, height=0):
-       """Init sequence."""
-       self.width = width
-       self.height = height
+    def __init__(self, *args, **kwargs):
+        """ Initialize the square. """
+        if len(args) == 2:
+            self.width = args[0]
+            self.height = args[1]
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
 
     def area_of_my_square(self):
         """ Area of the square. """
@@ -22,8 +26,9 @@ class Square:
         """ String representation of the square """
         return "{}/{}".format(self.width, self.height)
 
+
 if __name__ == "__main__":
-    s = Square(12, 9)
+    s = Square(width=12, height=9)
     print(s)
     print(s.area_of_my_square())
     print(s.perimeter_of_my_square())
