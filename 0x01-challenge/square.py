@@ -5,7 +5,7 @@
 class Square:
     """Square class."""
 
-    def __init__(self, width, height):
+    def __init__(self, width=0, height=0):
         """ Initialize the square. """
         self.width = width
         self.height = height
@@ -20,9 +20,7 @@ class Square:
 
     def __str__(self):
         """ String representation of the square """
-        # return "{}/{}".format(self.width, self.height)
-        return f"Width: {self.width}, Height: {self.height}"
-    
+        return "{}/{}".format(self.width, self.height)
 
 
 if __name__ == "__main__":
