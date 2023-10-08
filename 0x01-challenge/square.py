@@ -24,7 +24,6 @@ class square:
         """String representation."""
         return "{}/{}".format(self.width, self.height)
 
-
 if __name__ == "__main__":
     s = square(width=12, height=9)
     print(s)
