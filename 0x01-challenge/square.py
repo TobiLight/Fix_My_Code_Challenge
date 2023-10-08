@@ -5,7 +5,7 @@
 class Square:
     """Square class."""
 
-    def __init__(self,width, height):
+    def __init__(self, width, height):
         """ Initialize the square. """
         self.width = width
         self.height = height
