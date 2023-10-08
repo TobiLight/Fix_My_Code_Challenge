@@ -2,33 +2,33 @@
 """Square module"""
 
 
-class square():
-    """ Square class """
-    width = 0
-    height = 0
+class Square():
+    """Square class."""
 
     def __init__(self, *args, **kwargs):
-        """ Instantiation of class """
-        for key, value in kwargs.items():
-            setattr(self, key, value)
+        """ Initialize the square. """
+        if len(args) == 2:
+            self.width = args[0]
+            self.height = args[1]
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
 
-    def area_of_my_square(self):
-        """ Area of the square """
+    def area(self):
+        """ Area of the square. """
         return self.width * self.width
 
-    def PermiterOfMySquare(self):
-        """ Calc and returns the perimeter """
+    def perimeter(self):
+        """ Perimeter of the square. """
         return (self.width * 2) + (self.height * 2)
 
     def __str__(self):
-        """ Returns the string representation of the class """
+        """ String representation of the square """
         return "{}/{}".format(self.width, self.height)
 
 
 if __name__ == "__main__":
-    """ Documentation """
-
-    s = square(width=12, height=9)
+    s = Square(width=12, height=9)
     print(s)
-    print(s.area_of_my_square())
-    print(s.PermiterOfMySquare())
+    print(s.area())
+    print(s.perimeter())
